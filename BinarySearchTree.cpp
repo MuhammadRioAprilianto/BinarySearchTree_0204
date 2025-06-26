@@ -33,9 +33,11 @@ class BinaryTree
 
         Node *newNode = new Node(); //mengalokasikan memory untuk node baru
         newNode->info = x; //Assign value to the data field of new Node
+
         //Make the left and right child of the new node point to null
         newNode->leftchild = nullptr;
         newNode->rightchild = nullptr;
+
         //Locate the node which will be the parent of the node to be inserted
         Node *parent = nullptr;
         Node *currentNode = nullptr;
@@ -47,5 +49,13 @@ class BinaryTree
             ROOT = newNode;
             return;
         }
+
+        //if value in the data field of new node is less than that of parent
+        if (x < parent->info)
+        {
+            parent->leftchild = newNode;
+            return;
+        }
+        
     }
 };
