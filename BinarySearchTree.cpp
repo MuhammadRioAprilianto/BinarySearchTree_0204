@@ -24,4 +24,14 @@ class BinaryTree
         {
             ROOT = nullptr;
         }
+
+    void insert()
+    {
+        int x;
+        cout << "Masukkan Nilai: ";
+        cin >> x;
+
+        Node *newNode = new Node(); //mengalokasikan memory untuk node baru
+        
+    }
 };
