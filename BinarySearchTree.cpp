@@ -33,6 +33,9 @@ class BinaryTree
 
         Node *newNode = new Node(); //mengalokasikan memory untuk node baru
         newNode->info = x; //Assign value to the data field of new Node
+        //Make the left and right child of the new node point to null
+        newNode->leftchild = nullptr;
+        newNode->rightchild = nullptr;
         
     }
 };
