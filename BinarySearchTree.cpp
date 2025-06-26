@@ -67,6 +67,33 @@ class BinaryTree
 
     void Search(int element, Node *&parent, Node *&currentNode)
     {
-        
+        //this function searches the currentNode of the specification Node as well as the current Node of its parent
+        currentNode = ROOT;
+        parent = nullptr;
+        while ((currentNode != nullptr) && (currentNode->info != element))
+        {
+            parent = currentNode;
+            if (element < currentNode->info)
+                currentNode = currentNode->leftchild;
+            else
+                currentNode = currentNode->rightchild;
+        }
     }
+
+    void inorder(Node *ptr)
+    {
+        if (isEmpty())
+        {
+            cout << "Tree is empty" << endl;
+            return;
+        }
+        if (ptr == nullptr)
+            return;
+
+        inorder(ptr->leftchild);
+        cout << ptr->info << " "; //parent
+        inorder(ptr->rightchild);
+    }
+
+    
 };
