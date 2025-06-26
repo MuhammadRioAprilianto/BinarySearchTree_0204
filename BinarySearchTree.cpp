@@ -41,7 +41,7 @@ class BinaryTree
         //Locate the node which will be the parent of the node to be inserted
         Node *parent = nullptr;
         Node *currentNode = nullptr;
-        search(x, parent, currentNode);
+        Search (x, parent, currentNode);
 
         //If parent is NULL(tree is empty)
         if (parent == nullptr)
@@ -123,6 +123,11 @@ class BinaryTree
         postorder(ptr->leftchild);
         postorder(ptr->rightchild);
         cout << ptr->info << " "; //parent
+    }
+
+    bool isEmpty()
+    {
+        return ROOT == nullptr; 
     }
 };
 
